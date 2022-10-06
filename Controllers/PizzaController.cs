@@ -158,7 +158,7 @@ public class PizzaController : Controller
 
         pizzaContext.SaveChanges();
 
-        return RedirectToAction("Index");
+        return RedirectToAction("index");
     }
     [HttpPost]
     [ValidateAntiForgeryToken]

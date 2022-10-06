@@ -1,0 +1,21 @@
+﻿@model Pizza
+
+    <body style="margin:0;" padding="0;" box-sizin="border-box;">
+        <section>
+                <div>
+                    <div>
+                        <div>
+                            <img style="width:150px;" class="img-fluid" src="@Model.Photo" alt="@Model.Name" />
+                        </div>
+                        <div>
+                            <div>
+                                <h3>@Model.Name</h3>
+                                <span>Price : @Model.Price $</span>
+                            </div>
+                            <p> Ingredient: <small>@Model.Description</small></p>
+                        </div>
+                    </div>
+                </div>  
+        </section>
+    </body>
+

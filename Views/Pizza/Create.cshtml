@@ -1,0 +1,32 @@
+﻿@model Pizza
+
+@{
+}
+
+<div>
+    <form method="post" asp-action="Create">
+        @Html.AntiForgeryToken()
+        <div class="mb-3">
+            <label asp-for="Name" for="name" class="form-label">Nome</label>
+            <input asp-for="Name" type="text" class="form-control" id="name">
+            <span  asp-validation-for="Name"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" for="description" >Descrizione</label>
+            <textarea asp-for="Description" class="form-control" id="description"></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Photo" for="image" >Immagine</label>
+            <input asp-for="Photo" type="file"  id="image">
+            <span asp-validation-for="Photo"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price" for="price">Prezzo</label>
+            <input asp-for="Price" type="number" id="price" step=".1">
+            <span  asp-validation-for="Price"></span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+

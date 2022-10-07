@@ -5,6 +5,7 @@ using la_mia_pizzeria_crud_mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient.Server;
 using Microsoft.EntityFrameworkCore;
+
 //using AppContext = la_mia_pizzeria_crud_mvc.Context.AppContext;
 
 namespace la_mia_pizzeria_post.Controllers;
@@ -35,7 +36,7 @@ public class PizzaController : Controller
         }
     }
 
-    public IActionResult Show(int id)
+    public IActionResult Details(int id)
     {
         //Pizza? pizza = new();
         //using (var db = new AppContext())
@@ -54,7 +55,7 @@ public class PizzaController : Controller
 
             if (pizzaFound == null)
             {
-                return NotFound($"Il post con id {id} non è stato trovato");
+                return NotFound($"La pizza con id {id} non è stato trovato");
             }
             else
             {
@@ -63,7 +64,7 @@ public class PizzaController : Controller
         }
 
     }
-
+    [HttpGet]
     public IActionResult Create()
     {
         PizzasCategories pizzasCategories = new PizzasCategories();
@@ -97,7 +98,7 @@ public class PizzaController : Controller
         if (!ModelState.IsValid)
         {
             formData.Categories = context.Categories.ToList();
-            return View("Create", formData);
+            return View("Create");
         }
 
         context.Pizzas.Add(formData.Pizza);

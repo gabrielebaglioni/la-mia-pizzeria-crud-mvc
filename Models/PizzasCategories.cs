@@ -1,5 +1,5 @@
 ﻿using System;
-namespace la_mia_pizzeria_crud_mvc.Controllers;
+namespace la_mia_pizzeria_crud_mvc.Models;
 using la_mia_pizzeria_crud_mvc.Models;
 public class PizzasCategories
 {

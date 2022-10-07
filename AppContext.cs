@@ -28,7 +28,8 @@ public class AppContext : DbContext
                     Name = "Margherita",
                     Description = "La classica",
                     Photo = "https://www.melarossa.it/wp-content/uploads/2021/02/ricetta-pizza-margherita.jpg?x58780",
-                    Price = 4.00M
+                    Price = 4.00M,
+                    CategoryId = 1
                 },
                 new Pizza
                 {
@@ -36,7 +37,8 @@ public class AppContext : DbContext
                     Name = "Diavola",
                     Description = "Il Sud",
                     Photo = "https://www.melarossa.it/wp-content/uploads/2021/02/ricetta-pizza-margherita.jpg?x58780",
-                    Price = 5.50M
+                    Price = 5.50M,
+                    CategoryId = 2
                 },
                 new Pizza
                 {
@@ -44,7 +46,8 @@ public class AppContext : DbContext
                     Name = "Boscaiola",
                     Description = "Il Nord",
                     Photo = "https://www.melarossa.it/wp-content/uploads/2021/02/ricetta-pizza-margherita.jpg?x58780",
-                    Price = 6.00M
+                    Price = 6.00M,
+                    CategoryId = 3
                 },
                 new Pizza
                 {
@@ -52,7 +55,8 @@ public class AppContext : DbContext
                     Name = "Nostrana",
                     Description = "La Pizza Della Casa",
                     Photo = "https://www.melarossa.it/wp-content/uploads/2021/02/ricetta-pizza-margherita.jpg?x58780",
-                    Price = 8.50M
+                    Price = 8.50M,
+                    CategoryId = 4
                 });
 
     }

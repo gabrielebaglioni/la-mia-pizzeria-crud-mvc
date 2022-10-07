@@ -17,9 +17,7 @@
                                 </a>
                                 <span>Price : @pizza.Price $</span>
                                 <p> Description: <small>@pizza.Description</small></p>
-
                                 <a href="@Url.Action("Update","Pizza", new{ id = pizza.Id})"> Modifica</a>
-
                                 <form method="POST" asp-action="Delete" asp-route-id="@pizza.Id">
                                     <button  type="submit">Delete</button>
                                 </form>

@@ -1,16 +1,20 @@
-using System.Collections.Generic;
 using la_mia_pizzeria_crud_mvc.Models;
 using Microsoft.EntityFrameworkCore;
-namespace la_mia_pizzeria_post.Context;
+
 
 public class AppContext : DbContext
 {
-    public DbSet<Pizza> Pizzas { get; set; }
     
+
+    public DbSet<Pizza>? Pizzas { get; set; }
+
+    public DbSet<Category>? Categories { get; set; }
+
+
+    private const string ConnectionString = "Server=localhost;Database=db_pizzeria_categories;User=sa;Password=Scheggia12$;";
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost;Database=db_pizzeria;User=sa;Password=Scheggia12$;");
-        //"myCustomConnString": "Server=localhost,1433\\Catalog=myDatabase;Database=myDatabase;User=username;Password=MYSecurePWD;"
+        optionsBuilder.UseSqlServer(ConnectionString);
 
     }
     //DATA SEEDING
@@ -50,6 +54,7 @@ public class AppContext : DbContext
                     Photo = "https://www.melarossa.it/wp-content/uploads/2021/02/ricetta-pizza-margherita.jpg?x58780",
                     Price = 8.50M
                 });
+
     }
 
 

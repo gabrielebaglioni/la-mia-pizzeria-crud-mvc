@@ -4,6 +4,7 @@ namespace la_mia_pizzeria_crud_mvc.Models;
 
 public class Pizza
 {
+    
 
     [Key]
     public int Id { get; set; }
@@ -15,6 +16,9 @@ public class Pizza
     [Required(ErrorMessage = "Is required")]
     public decimal Price { get; set; }
 
+
+    public int? CategoryId { get; set; }
+    public Category? Category { get; set; }
 
     public Pizza()
     {
